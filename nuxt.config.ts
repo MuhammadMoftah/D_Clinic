@@ -7,6 +7,11 @@ export default defineNuxtConfig({
   css: [
     "@/assets/css/tailwind.css",
   ],
+  components: [
+    // Register all components without directory-name prefix
+    // so AppStatCard, AppCard, AppButton, etc. work without "Data" / "Ui" prefix
+    { path: '~/components', pathPrefix: false },
+  ],
   app: {
     head: {
       title: 'Dr. Dalia Clinic',
